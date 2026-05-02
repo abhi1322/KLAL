@@ -47,8 +47,8 @@ export default function EditProductPage({ params }: { params: { id: string } }) 
   if (loading) return <div className="p-8 text-center text-gray-500">Loading product data...</div>;
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-      <h1 className="text-3xl font-bold font-heading text-interio-charcoal mb-8">Edit Product</h1>
+    <div className="max-w-2xl mx-auto bg-white p-5 md:p-8 rounded-lg shadow-sm border border-gray-100">
+      <h1 className="text-2xl md:text-3xl font-bold font-heading text-interio-charcoal mb-6 md:mb-8">Edit Product</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
@@ -62,7 +62,7 @@ export default function EditProductPage({ params }: { params: { id: string } }) 
             placeholder="Write product description here..."
           />
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Price</label>
             <Input required type="number" value={formData.price} onChange={e => setFormData({...formData, price: e.target.value})} />
