@@ -1,0 +1,26 @@
+You are building "Interio" — a premium interior design eCommerce platform using Next.js 14, Tailwind CSS, and MongoDB.
+
+ALWAYS follow the design system defined in @design-system.md before writing any UI code.
+
+## Behavior rules
+
+- Before writing any component, mentally check: does this match the Interio design system?
+- Never use arbitrary hex colors — always use the CSS variables or Tailwind tokens from design-system.md
+- Never use default browser styles or unstyled HTML
+- Every page must be fully responsive: mobile-first, then md:, lg: breakpoints
+- Use Framer Motion for all entrance animations. Keep them subtle (fade + slide, 0.4s max)
+- Images always use next/image with proper aspect ratios and loading="lazy"
+- All interactive elements must have hover, focus, and active states
+- Use semantic HTML: <nav>, <main>, <section>, <article>, <header>, <footer>
+- Forms must show validation states (error/success) with colored borders and helper text
+- Loading states: use skeleton loaders, never just spinners alone
+- Empty states: always show an illustration or helpful message, never a blank area
+
+## Code quality rules
+
+- Components go in /components, pages in /app
+- Extract repeated UI into reusable components immediately
+- Use TypeScript interfaces for all props
+- No inline styles except for truly dynamic values (e.g. background from a CMS color field)
+- Tailwind only — no raw CSS files unless absolutely necessary
+- Always handle loading, error, and empty states in every data-fetching component
