@@ -29,7 +29,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img 
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80" 
-          alt="Premium Interior Design" 
+          alt="Premium KLalr Design" 
           className="absolute inset-0 w-full h-full object-cover scale-105 animate-[pulse_10s_ease-in-out_infinite]"
         />
         <motion.div 
@@ -45,7 +45,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
             Elevate Your <br className="hidden md:block"/> Living Space
           </h1>
           <p className="opacity-70 text-lg md:text-xl font-inter md:leading-relaxed mx-auto mb-10 font-light opacity-90 max-w-2xl drop-shadow-md">
-            Discover our curated collection of premium PVC panels, elegant wall cladding, and modern false ceilings designed for the sophisticated interior.
+            Discover our curated collection of premium PVC panels, elegant wall cladding, and modern false ceilings designed for the sophisticated KLalr.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/products">
@@ -105,7 +105,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
           <p className="text-sm font-inter uppercase tracking-[0.2em] text-copper mb-3">Our Bestsellers</p>
           <h2 className="font-playfair text-4xl font-semibold text-charcoal">Featured Materials</h2>
           <div className="w-16 h-0.5 bg-copper mx-auto mt-4 mb-6" />
-          <p className="text-stone-500 font-inter text-lg max-w-2xl mx-auto mb-6">Handpicked premium panels and claddings favored by top interior designers.</p>
+          <p className="text-stone-500 font-inter text-lg max-w-2xl mx-auto mb-6">Handpicked premium panels and claddings favored by top KLalr designers.</p>
           <Link href="/products" className="inline-flex items-center text-copper font-inter font-medium hover:underline transition-transform hover:translate-x-1">
             View full collection <span className="ml-2">→</span>
           </Link>
@@ -141,7 +141,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
               <span className="text-copper font-inter font-medium tracking-[0.2em] uppercase text-sm mb-2 block">Our Design Philosophy</span>
               <h2 className="text-white font-playfair text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold">Crafting Environments That Inspire</h2>
               <p className="text-white/80 font-inter text-lg leading-relaxed max-w-xl">
-                Interio isn't just about selling materials; it's about providing the foundational elements for your masterpiece. Our PVC panels and claddings offer unmatched durability combined with breathtaking aesthetics.
+                KLal isn't just about selling materials; it's about providing the foundational elements for your masterpiece. Our PVC panels and claddings offer unmatched durability combined with breathtaking aesthetics.
               </p>
               <ul className="space-y-4 pt-4">
                 {['Termite & Moisture Resistant Profiles', 'Eco-Friendly Sourced Materials', 'Zero Maintenance Needed Design'].map((item, i) => (
@@ -170,7 +170,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
             >
               <div className="aspect-[4/5] rounded-t-full rounded-bl-full overflow-hidden relative shadow-2xl border-4 border-white/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Beautiful Interior" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Beautiful KLalr" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent" />
               </div>
               
@@ -186,7 +186,7 @@ export function LandingAnimationWrapper({ featuredProducts }: { featuredProducts
                   </div>
                   <div>
                     <p className="font-inter font-semibold text-sm text-charcoal">Sarah Jenkins</p>
-                    <p className="font-inter text-xs text-copper tracking-wide uppercase">Interior Designer</p>
+                    <p className="font-inter text-xs text-copper tracking-wide uppercase">KLalr Designer</p>
                   </div>
                 </div>
               </motion.div>

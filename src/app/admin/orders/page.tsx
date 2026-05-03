@@ -11,7 +11,7 @@ export default async function AdminOrdersPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold font-heading text-interio-charcoal mb-8">WhatsApp Inquiries</h1>
+      <h1 className="text-3xl font-bold font-heading text-charcoal mb-8">WhatsApp Inquiries</h1>
       
       <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
         <table className="w-full text-sm text-left">

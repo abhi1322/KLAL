@@ -25,7 +25,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-gray-50 flex">
       <aside className="w-64 bg-white border-r border-gray-200 hidden md:flex flex-col">
         <div className="h-16 flex items-center px-6 border-b border-gray-200">
-          <h1 className="font-heading text-2xl font-bold text-teal-600">Interio</h1>
+          <h1 className="font-heading text-2xl font-bold text-teal-600">KLal</h1>
         </div>
         <nav className="flex-1 px-4 mt-6 space-y-1">
           {navItems.map((item) => {
@@ -56,7 +56,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
 
       <main className="flex-1 flex flex-col h-screen overflow-hidden">
         <header className="h-16 bg-white border-b border-gray-200 flex justify-between items-center px-6 md:hidden">
-          <h1 className="font-heading text-xl font-bold text-teal-600">Interio</h1>
+          <h1 className="font-heading text-xl font-bold text-teal-600">KLal</h1>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-500 hover:text-gray-700">
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

@@ -19,7 +19,7 @@ export async function GET() {
     const salt = await bcrypt.genSalt(10);
     const passwordHash = await bcrypt.hash('admin123', salt);
     await Admin.create({
-      email: 'admin@interio.com',
+      email: 'admin@KLal.com',
       passwordHash,
     });
 
@@ -46,9 +46,9 @@ export async function GET() {
       {
         title: 'Modern Fluted Wall Cladding',
         slug: 'modern-fluted-wall-cladding',
-        description: 'Charcoal fluted wall louvers for interior and exterior.',
+        description: 'Charcoal fluted wall louvers for KLalr and exterior.',
         price: 850,
-        tags: ['charcoal', 'exterior', 'interior'],
+        tags: ['charcoal', 'exterior', 'KLalr'],
         category: categories[1]._id,
         inStock: true,
         featured: true,
@@ -57,7 +57,7 @@ export async function GET() {
       {
         title: 'Gypsum False Ceiling Board',
         slug: 'gypsum-false-ceiling',
-        description: 'Moisture resistant 12mm gypsum board for interiors.',
+        description: 'Moisture resistant 12mm gypsum board for KLalrs.',
         price: 320,
         discountPrice: 280,
         tags: ['gypsum', 'moisture-resistant'],
@@ -68,7 +68,7 @@ export async function GET() {
       }
     ]);
 
-    return NextResponse.json({ message: 'Database seeded successfully. Admin credentials: admin@interio.com / admin123' });
+    return NextResponse.json({ message: 'Database seeded successfully. Admin credentials: admin@KLal.com / admin123' });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

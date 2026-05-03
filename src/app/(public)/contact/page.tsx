@@ -30,7 +30,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center">
               <strong className="w-24 text-charcoal font-semibold">Email:</strong>
-              <span>hello@interio.com</span>
+              <span>hello@KLal.com</span>
             </div>
           </div>
         </div>

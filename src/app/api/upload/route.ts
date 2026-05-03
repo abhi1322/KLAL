@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     const uploadPromise = new Promise((resolve, reject) => {
       cloudinary.uploader.upload_stream(
-        { folder: 'interio/products' },
+        { folder: 'KLal/products' },
         (error, result) => {
           if (error) reject(error);
           else resolve(result);

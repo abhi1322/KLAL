@@ -48,7 +48,7 @@ export default function EditProductPage({ params }: { params: { id: string } }) 
 
   return (
     <div className="max-w-2xl mx-auto bg-white p-5 md:p-8 rounded-lg shadow-sm border border-gray-100">
-      <h1 className="text-2xl md:text-3xl font-bold font-heading text-interio-charcoal mb-6 md:mb-8">Edit Product</h1>
+      <h1 className="text-2xl md:text-3xl font-bold font-heading text-charcoal mb-6 md:mb-8">Edit Product</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>

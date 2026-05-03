@@ -6,7 +6,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="font-heading text-3xl font-bold text-teal-600">
-          Interio
+          KLal
         </Link>
         <nav className="hidden md:flex gap-8">
           <Link href="/" className="text-sm font-medium hover:text-teal-600 transition-colors">Home</Link>

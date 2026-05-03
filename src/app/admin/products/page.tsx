@@ -5,6 +5,7 @@ import connectToDatabase from '@/lib/mongodb';
 import Product from '@/models/Product';
 import { Edit, Plus, Trash } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import DeleteButton from '@/components/admin/DeleteButton';
 
 export const revalidate = 0;
 
@@ -15,7 +16,7 @@ export default async function AdminProductsPage() {
   return (
     <div>
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold font-heading text-interio-charcoal">Products</h1>
+        <h1 className="text-3xl font-bold font-heading text-charcoal">Products</h1>
         <Link href="/admin/products/new">
           <Button className="bg-teal-600 hover:bg-teal-600/90 text-white">
             <Plus className="mr-2 h-4 w-4" /> Add Product
@@ -58,6 +59,7 @@ export default async function AdminProductsPage() {
                         <Edit className="h-4 w-4" />
                       </Button>
                     </Link>
+                    <DeleteButton url={`/api/products/${product._id}`} itemType="product" />
                   </div>
                 </td>
               </tr>

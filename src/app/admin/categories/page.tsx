@@ -2,6 +2,7 @@ import React from 'react';
 import connectToDatabase from '@/lib/mongodb';
 import Category from '@/models/Category';
 import Link from 'next/link';
+import DeleteButton from '@/components/admin/DeleteButton';
 
 export const revalidate = 0;
 
@@ -12,7 +13,7 @@ export default async function AdminCategoriesPage() {
   return (
     <div>
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold font-heading text-interio-charcoal">Categories</h1>
+        <h1 className="text-3xl font-bold font-heading text-charcoal">Categories</h1>
         <Link href="/admin/categories/new" className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-600/90 text-sm font-medium transition-colors">
           Add Category
         </Link>
@@ -25,7 +26,8 @@ export default async function AdminCategoriesPage() {
               <th className="px-6 py-4 font-medium">Name</th>
               <th className="px-6 py-4 font-medium">Slug</th>
               <th className="px-6 py-4 font-medium">Image</th>
-              <th className="px-6 py-4 font-medium text-right">Added</th>
+              <th className="px-6 py-4 font-medium">Added</th>
+              <th className="px-6 py-4 font-medium text-right">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
@@ -36,14 +38,19 @@ export default async function AdminCategoriesPage() {
                 <td className="px-6 py-4 text-gray-500">
                   {category.image ? 'Has Image' : 'No Image'}
                 </td>
-                <td className="px-6 py-4 text-right">
+                <td className="px-6 py-4">
                   {new Date(category.createdAt).toLocaleDateString()}
+                </td>
+                <td className="px-6 py-4 text-right">
+                  <div className="flex justify-end gap-2">
+                    <DeleteButton url={`/api/categories/${category._id}`} itemType="category" />
+                  </div>
                 </td>
               </tr>
             ))}
             {categories.length === 0 && (
               <tr>
-                <td colSpan={4} className="text-center py-8 text-gray-500">No categories found.</td>
+                <td colSpan={5} className="text-center py-8 text-gray-500">No categories found.</td>
               </tr>
             )}
           </tbody>

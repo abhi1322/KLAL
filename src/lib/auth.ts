@@ -4,6 +4,10 @@ import connectToDatabase from '@/lib/mongodb';
 import Admin from '@/models/Admin';
 import bcrypt from 'bcryptjs';
 
+const useSecureCookies = process.env.NEXTAUTH_URL?.startsWith('https://');
+const cookiePrefix = useSecureCookies ? '__Secure-' : '';
+const hostName = process.env.NEXTAUTH_URL ? new URL(process.env.NEXTAUTH_URL).hostname : 'localhost';
+
 export const authOptions: AuthOptions = {
   providers: [
     CredentialsProvider({
@@ -36,6 +40,19 @@ export const authOptions: AuthOptions = {
   ],
   session: {
     strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
+  cookies: {
+    sessionToken: {
+      name: `${cookiePrefix}next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: useSecureCookies,
+        domain: hostName === 'localhost' ? 'localhost' : hostName,
+      },
+    },
   },
   callbacks: {
     async jwt({ token, user }) {

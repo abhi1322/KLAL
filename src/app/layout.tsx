@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
-  title: "Interio | Premium Interior Design",
+  title: "KLal | Premium KLalr Design",
   description: "High quality PVC panels, wall cladding, and false ceilings.",
 };
 
