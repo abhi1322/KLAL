@@ -42,7 +42,7 @@ export default function DeleteButton({ url, itemType }: DeleteButtonProps) {
   return (
     <>
       <Button 
-        variant="destructive" 
+        variant="default" 
         size="sm" 
         onClick={() => setIsOpen(true)}
         className="bg-red-500 hover:bg-red-600 text-white ml-2"
@@ -82,7 +82,7 @@ export default function DeleteButton({ url, itemType }: DeleteButtonProps) {
                   Cancel
                 </Button>
                 <Button 
-                  variant="destructive" 
+                  variant="default" 
                   className="flex-1 bg-red-600 hover:bg-red-700 text-white"
                   onClick={handleDelete}
                   disabled={isDeleting}
